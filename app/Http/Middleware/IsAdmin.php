@@ -27,7 +27,7 @@ class IsAdmin
         // if(count($user) != 0){
             return redirect('/admin');
         }else{
-            if(auth()->user()->is_admin == 1 || auth()->user()->is_admin == 2) {
+            if(auth()->user()->is_admin == 1) {
                 return $next($request);
             }
             return redirect('/admin');
